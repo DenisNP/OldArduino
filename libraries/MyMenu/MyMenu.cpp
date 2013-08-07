@@ -221,7 +221,7 @@ void Menu::goItem(int item_idx){
 }
 
 void Menu::goLast(){
-	goSub(cur_sub);
+	goItem(cur_item);
 }
 
 void Menu::goBack(){
