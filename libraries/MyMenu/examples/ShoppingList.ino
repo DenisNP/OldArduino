@@ -11,7 +11,7 @@ MItm items[NUM_ITEMS] = {
   MItm("Veggies",2),
   MItm("Other",3),
   MItm("FRUITS LIST",1,0), //this is the submenu with index 1 (0 is previous menu index)
-  MItm("Apple",50), // is there is no "50" submenu callback will run
+  MItm("Apple",50), // if there is no "50" submenu callback will run
   MItm("Orange",60),
   MItm("Banana",70),
   MItm("Pear",80),
@@ -49,10 +49,7 @@ void setup() {
   pinMode(46,INPUT);
   pinMode(48,INPUT);
   
-  //initialize serial port for monitoring
-  Serial.begin(9600);
-  
-  //initialize lcd screen
+  //initialize lcd
   lcd.begin(20,4);
   
   //show main menu on screen
@@ -81,11 +78,13 @@ delay(100);
 }
 
 void menuCallback(int idx){
+  //do something according to index of item selected
   if(idx < 10){
     lcd.clear();
     lcd.setCursor(2,1);
     lcd.print("NO MEAT n FISH!"); 
-  }else if(idx == 10){ //select "shark"
+    delay(1000);
+  }else if(idx == 10){ //selected "shark"
     int i=16;
     while(i >= 0){
       lcd.clear();
@@ -100,7 +99,7 @@ void menuCallback(int idx){
     lcd.clear();
     lcd.setCursor(2,2);
     lcd.print(String(idx)+" pressed");
+    delay(1000);
   }
-  delay(1000);
-  menu.goLast();
+  menu.goLast(); //return to last viewed menu
 }
