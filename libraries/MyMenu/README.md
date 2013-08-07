@@ -1,6 +1,7 @@
 MyMenu library for LCD with 2+ lines of text
    	
 Usage:
+
 	#define NUM_ITEMS 7 //total number of items in menu include submenu-headers
 	#define NUM_ROWS 4 //total number of rows in your lcd, must be greater than or equal to 2
 
@@ -36,7 +37,3 @@ Usage:
 	void menuCallback(int idx){
 		Serial.println(idx);
 	}
-
-| ===============================================
-| Made by Denis Peshekhonov, 2013 
-| ===============================================
