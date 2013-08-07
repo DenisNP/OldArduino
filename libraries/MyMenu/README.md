@@ -28,9 +28,10 @@ Usage:
 	menu.goUp(); // to list up
 	menu.goNext(); // to go to submenu or run callback (i.e "select item")
 	menu.goBack(); // to go to previous menu
+	menu.goLast(); // to return to last opened submenu
 	menu.goSub(int sub_idx); // to go to submenu with index <sub_idx>
 	menu.goItem(int item_idx); // to go to submenu contains item with index (in "items" array) <item_idx> and move cursor to this item
-
+	
 	//also you need to declare callback, it will be run if there is no submenu with current index
 	//e.g.
 	//If current item is MItm("Title",5) and you call goNext(), then:
