@@ -1,5 +1,8 @@
-MyMenu library for LCD with 2+ lines of text
-   	
+MyMenu
+======
+
+Menu library for LCDs with 2+ lines of text
+
 Usage:
 
 	#define NUM_ITEMS 7 //total number of items in menu include submenu-headers
