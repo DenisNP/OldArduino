@@ -6,7 +6,7 @@ LiquidCrystal lcd(3, 5, 10, 11, 12, 13);
 #define NUM_ITEMS 32 //length of items array include submenu headers
 
 MItm items[NUM_ITEMS] = {
-  MItm("MAIN",0,0), //main header always 0,0
+  MItm("SHOPPING LIST",0,0), //main header always 0,0
   MItm("Fruits",1), //1 is target submenu index
   MItm("Veggies",2),
   MItm("Other",3),
@@ -62,19 +62,19 @@ void setup() {
 void loop() {
   if(digitalRead(42) == HIGH){
     menu.goBack();
-    delay(300); 
+    delay(100); 
   }
   if(digitalRead(44) == HIGH){
     menu.goDown();
-    delay(300); 
+    delay(100); 
   }
   if(digitalRead(46) == HIGH){
     menu.goUp();
-    delay(300); 
+    delay(100); 
   }
   if(digitalRead(48) == HIGH){
     menu.goNext();
-    delay(300); 
+    delay(100); 
   }  
 
 delay(100);
