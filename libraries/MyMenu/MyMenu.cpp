@@ -260,7 +260,7 @@ void Menu::drawSub(){
 				if(i == cur_item){
 					(*lcd).print(cursor+citem.name);
 				}else{
-					(*lcd).print(String("                    ").substring(1,cursor.length())+citem.name);
+					(*lcd).print(String("                    ").substring(1,cursor.length()+1)+citem.name);
 				}
 				line++;
 			}
