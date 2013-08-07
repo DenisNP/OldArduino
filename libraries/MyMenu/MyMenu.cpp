@@ -210,7 +210,7 @@ void Menu::goItem(int item_idx){
 			if(items[i].second > -1 && items[i].first == citm.sub_id){
 				cur_sub = citm.sub_id;
 				cur_item = item_idx;
-				cur_sub_index = item_idx-i;
+				cur_sub_index = item_idx-i-1;
 				title = items[i].name;
 				
 				drawSub();
